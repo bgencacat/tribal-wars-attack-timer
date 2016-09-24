@@ -1,0 +1,38 @@
+{
+  "name": "Tribal Wars Attack Timer by Batıkan Genç ACAT",
+  "version": "1.4",
+  "manifest_version": 2,
+  "description": "You can plan attacks with this extension. Did you find bug? Please let me know for fix: batikangencacat.com.tr",
+  "author": "Batıkan Genç ACAT",
+  "homepage_url": "http://batikangencacat.com.tr",
+  "icons": {
+    "16": "icon16.png",
+    "24": "icon24.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "64": "icon64.png",
+    "128": "icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "24": "icon24.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "64": "icon64.png",
+      "128": "icon128.png"
+    },
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "https://*.klanlar.org/*&screen=place&try=confirm*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.klanlar.org/*&screen=place&try=confirm*"],
+      "js": ["main.js"],
+      "run_at": "document_end",
+      "css": ["main.css"]
+    }
+  ]
+}
